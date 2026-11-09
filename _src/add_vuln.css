@@ -1,0 +1,67 @@
+/* ===== 脆弱性チェック：ここから ===== */
+/* 1画面目 */
+.hero h1 .sub{line-height:1.6;}
+.hero h1 .sub .nobr{display:inline-block;}
+.vc-lead{margin:14px 0 0;max-width:860px;}
+.vc-lead p{margin:0 0 4px;font-size:17px;line-height:1.8;font-weight:700;}
+.vc-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:22px;align-items:stretch;margin:24px 0 8px;}
+.vc-top .media-slot{margin:0;aspect-ratio:auto;min-height:240px;height:100%;}
+@media (max-width:760px){
+  .vc-top{grid-template-columns:1fr;}
+  .vc-top .media-slot{aspect-ratio:2000/848;min-height:0;height:auto;}
+}
+/* 料金の枠 */
+.vc-box{background:var(--navy);color:#fff;border-radius:10px;padding:24px 26px;text-align:center;height:100%;
+  display:flex;flex-direction:column;justify-content:center;gap:8px;}
+.vc-box p{margin:0;color:#fff!important;}
+.vc-box .b-unit{font-size:16px;font-weight:800;letter-spacing:.08em;}
+.vc-box .b-price{color:var(--yellow)!important;font-weight:900;line-height:1.1;white-space:nowrap;}
+.vc-box .b-num{font-size:clamp(44px,5.6vw,64px);letter-spacing:-.01em;}
+.vc-box .b-yen{font-size:clamp(22px,2.6vw,30px);}
+.vc-box .b-tax{font-size:clamp(16px,1.8vw,20px);}
+.vc-box .b-note{font-size:15px;font-weight:700;line-height:1.7;}
+.vc-box .b-term{margin-top:6px!important;padding-top:10px;border-top:1px solid rgba(255,255,255,.35);font-size:17px;font-weight:800;}
+.vc-box .b-term b{font-size:24px;color:var(--yellow);}
+.vc-price-c{max-width:620px;margin:0 auto 8px;}
+/* チェックリスト・ポイント（記号は本文の文字） */
+.vc-h{margin-top:34px;}
+.vc-check,.vc-points{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
+.vc-check li,.vc-points li{background:#fff;border:1px solid #cfd8e3;border-radius:8px;padding:12px 16px;font-size:16px;font-weight:700;line-height:1.65;}
+.vc-points{grid-template-columns:repeat(3,minmax(0,1fr));}
+.vc-points li{background:var(--navy-l);border-color:var(--navy-l);color:var(--navy-d);}
+.vc-arrow{margin:14px 0 0;font-size:18px;font-weight:900;color:var(--red)!important;}
+@media (max-width:760px){ .vc-check,.vc-points{grid-template-columns:1fr;} }
+/* ボタン */
+.vc-cta{margin-top:30px;}
+/* 2画面目：チェック内容 */
+.vc-items{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.vc-item{background:#fff;border-left:5px solid var(--navy);padding:12px 16px;}
+.vc-item dt{font-size:16.5px;font-weight:900;color:var(--navy);line-height:1.5;}
+.vc-item dd{margin:4px 0 0;font-size:15.5px;line-height:1.7;}
+@media (max-width:760px){ .vc-items{grid-template-columns:1fr;} }
+/* 3画面目：F.A.Q.（Q・Aは本文の文字） */
+.vc-qa dt{padding-left:0;}
+.vc-qa dt:before,.vc-qa dd:before{content:none;}
+.vc-qa dd{padding-left:14px!important;}
+.vc-qa .qn,.vc-qa .an{display:inline-block;min-width:1.8em;font-weight:900;}
+.vc-qa .qn{color:var(--accent);}
+.vc-qa .an{color:var(--navy);}
+.vc-msg-ttl{margin-top:40px;}
+.vc-links{margin-top:22px;}
+.vc-links th{white-space:nowrap;color:var(--navy);}
+.vc-links td{word-break:break-all;}
+.vc-links .vc-st{width:6em;white-space:nowrap;font-size:13px;font-weight:800;text-align:center;}
+.vc-links .vc-st.on{color:var(--red);}
+@media (max-width:640px){
+  table.tbl.vc-links tr{display:grid;grid-template-columns:auto 1fr;}
+  table.tbl.vc-links th,table.tbl.vc-links td{display:block;width:auto;}
+  table.tbl.vc-links td:last-child{grid-column:1 / -1;}
+  table.tbl.vc-links .vc-st{text-align:left;}
+}
+/* 4画面目：会社案内 */
+.vc-co .sg-name{margin:0 0 2px!important;}
+.vc-co .sg-co{font-size:15px;}
+
+/* 画面の下に余白 */
+main section{padding-bottom:44px;}
+/* ===== 脆弱性チェック：ここまで ===== */

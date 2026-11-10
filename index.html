@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- BUILD_TAG: swc2026_vulncheck_ver1.0 / 2026-11-09 -->
+<!-- BUILD_TAG: swc2026_vulncheck_ver2.0 / 2026-11-10 -->
 <html lang="ja">
 <head>
 <meta charset="utf-8">
@@ -1047,6 +1047,18 @@ main section{padding-bottom:44px;}
 /* ロゴを大きく（11/9） */
 .hd-logo-img{height:64px;}
 @media (max-width:700px){ .hd-logo-img{height:34px;} }
+/* 再校（11/10 永田様の修正）：大見出し2行・料金と受付開始の帯・全幅の画像 */
+.hero h1 .kw .kl{display:block;}
+.vc-band{margin:22px 0 0;}
+.vc-band .p-tax{font-size:14px;line-height:1.6;}
+.vc-band .hc-left .p-date{font-size:clamp(40px,5vw,64px);}
+.vc-wide{display:flex;align-items:center;justify-content:center;width:100%;max-width:none;margin:22px 0 0;border-radius:0;aspect-ratio:2000/700;min-height:0;}
+@media (max-width:760px){ .vc-wide{aspect-ratio:2000/1000;} }
+@media (max-width:480px){
+  .hero h1 .kw{font-size:clamp(20px,7.6vw,40px);letter-spacing:0;}
+  .vc-band .hc-left .p-date{font-size:44px;}
+  .vc-band .p-unit{font-size:20px!important;}
+}
 /* ===== 脆弱性チェック：ここまで ===== */
 
 </style>
@@ -1074,19 +1086,30 @@ main section{padding-bottom:44px;}
   <div class="wrap">
     <h1>
       <span class="sub"><span class="nobr">大学と学会のホームページ</span>　<span class="nobr">数多くが停止したままです</span>　<span class="nobr">とても困ります！</span></span>
-      <span class="kw"><span class="nobr">ＰＨＰ</span><span class="nobr">脆弱性チェック</span></span>
+      <span class="kw"><span class="kl">ＰＨＰ脆弱性チェックと</span><span class="kl">最適な修復アドバイス</span></span>
     </h1>
     <div class="vc-lead">
       <p>更新が止まったサイトは、改ざんや情報漏えいの入口になりやすい。</p>
       <p>サイエンスウェブ　丹野篤美とスタッフが現況を診断し、リスク管理と強化対策をアドバイス。</p>
     </div>
 
-    <div class="vc-top">
-      <div class="vc-price"><div class="vc-box"><p class="b-unit">1サイト　料金</p><p class="b-price"><span class="b-num">50,000</span><span class="b-yen">円</span><span class="b-tax">（税込）</span></p><p class="b-note">脆弱性アドバイス付・追加費用なし。<br>カード払い可能。</p><p class="b-term">納期　<b>72時間</b>以内</p></div></div>
-      <!-- 画像エリア：差し替える画像を images/ に置き、下の枠の中に img を入れてください
-           <img src="images/top.jpg" alt="ＰＨＰ脆弱性チェックのイメージ"> -->
-      <div class="media-slot" id="mediaSlot"><span class="ms-note">画像エリア</span></div>
+    <div class="hero-card vc-band">
+      <div class="hc-left">
+        <div class="n">1サイト　料金</div>
+        <div class="p"><span class="p-date">50,000</span><span class="p-unit">円（税込）</span></div>
+        <div class="p-tax">脆弱性アドバイス付・追加費用なし。カード払い可能。<br>納期　72時間以内</div>
+      </div>
+      <div class="hc-sep" aria-hidden="true"></div>
+      <div class="hc-right">
+        <div class="n">受付開始　2026年</div>
+        <div class="p"><span class="p-date">11月11日</span><span class="p-unit">（水）12時〜</span></div>
+      </div>
     </div>
+  </div>
+  <!-- 画像エリア：差し替える画像を images/ に置き、下の枠の中に img を入れてください
+       <img src="images/top.jpg" alt="ＰＨＰ脆弱性チェックのイメージ"> -->
+  <div class="media-slot vc-wide" id="mediaSlot"><span class="ms-note">画像エリア</span></div>
+  <div class="wrap">
 
     <h2 class="sub-ttl vc-h">こんなサイト、ありませんか？</h2>
     <ul class="vc-check">

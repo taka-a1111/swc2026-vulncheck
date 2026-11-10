@@ -67,4 +67,16 @@ main section{padding-bottom:44px;}
 /* ロゴを大きく（11/9） */
 .hd-logo-img{height:64px;}
 @media (max-width:700px){ .hd-logo-img{height:34px;} }
+/* 再校（11/10 永田様の修正）：大見出し2行・料金と受付開始の帯・全幅の画像 */
+.hero h1 .kw .kl{display:block;}
+.vc-band{margin:22px 0 0;}
+.vc-band .p-tax{font-size:14px;line-height:1.6;}
+.vc-band .hc-left .p-date{font-size:clamp(40px,5vw,64px);}
+.vc-wide{display:flex;align-items:center;justify-content:center;width:100%;max-width:none;margin:22px 0 0;border-radius:0;aspect-ratio:2000/700;min-height:0;}
+@media (max-width:760px){ .vc-wide{aspect-ratio:2000/1000;} }
+@media (max-width:480px){
+  .hero h1 .kw{font-size:clamp(20px,7.6vw,40px);letter-spacing:0;}
+  .vc-band .hc-left .p-date{font-size:44px;}
+  .vc-band .p-unit{font-size:20px!important;}
+}
 /* ===== 脆弱性チェック：ここまで ===== */

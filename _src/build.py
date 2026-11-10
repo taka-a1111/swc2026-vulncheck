@@ -4,7 +4,7 @@
 import sys, os
 
 src, out = sys.argv[1], sys.argv[2]
-BUILD_TAG = 'swc2026_vulncheck_ver1.0 / 2026-11-09'
+BUILD_TAG = 'swc2026_vulncheck_ver2.0 / 2026-11-10'
 
 def rd(n):
     return open(os.path.join(src, n), encoding='utf-8').read()
@@ -31,7 +31,7 @@ def rep(s, old, new, n=1):
 
 t = rep(t, '{{BUILD_TAG}}', BUILD_TAG)
 t = rep(t, '{{CSS}}', css)
-t = rep(t, '{{PRICE_BOX}}', price_box, 2)
+t = rep(t, '{{PRICE_BOX}}', price_box, 1)
 t = rep(t, '{{CTA}}', cta, 3)
 t = rep(t, '{{TOP_IMG}}', '')
 assert '{{' not in t, '置き換え残り'
